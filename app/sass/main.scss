@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'bootstrap-variables';
+
+
+//mixin
+@import 'mixin/links';
+@import 'mixin/buttons';
+
+//@import 'nav';
+//@import 'responsive-table';
+//@import 'badge';
+@import 'fonts-icon';
+//@import 'btn';
+
+//@import 'icon-animate';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass';
+//@import 'sidebar';
+//@import 'navbar';
+//@import 'dashboard';
+
+@import 'checkbox';
+
+//@import 'label';
+//@import 'tickets';
+//@import 'card';
+//@import 'sign-in/sign-in';
+//
+//@import 'well';
+//@import 'avatar';
+//@import 'tab';
+//@import 'slider';
+//@import 'summary-slider';
+@import 'text';
+@import 'dropdown-full-width';
+
+//@import 'buttons-variant';
+@import 'link';
+
+@import 'header/header';
+@import 'header/navbar';
+@import 'modal/choose-region';
+//@import 'authorization-steps';
+@import '404';
+
+//@import 'confirm';
+//@import 'statistics';
+//@import 'bootstrap-datetimepicker.scss';

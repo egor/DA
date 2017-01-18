@@ -1,0 +1,19 @@
+//$chooce-modal-bg-color: rgba(43,60,77,.85);
+$chooce-modal-bg-color: $navbar-default-bg !default;
+
+.modal-choose-country{
+  background: $chooce-modal-bg-color;
+  display: none;
+}
+.modal-choose-city{
+  background: $chooce-modal-bg-color;
+  display: none;
+}
+
+.modal-full{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: $zindex-modal;
+  top: 0;
+}
