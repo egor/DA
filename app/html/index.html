@@ -25,11 +25,11 @@
 <body>
 
 <!-- replace-region-->
-<div class="region-header">
+<div id="region-header" class="region-header collapse in">
     <div class="popup-box">
         <div class="popup-region"><span class="popup-region-text">Вы действительно находитесь в Днепропетровске?</span>
-            <a href="#" class="popup-region-link link-dashed">Да, все верно</a>
-            <a href="#" class="popup-region-link link-dashed">Нет, сменить регион</a>
+            <a href="#" data-toggle="collapse" data-target="#region-header" aria-expanded="false" aria-controls="region-header" class="popup-region-link link-dashed">Да, все верно</a>
+            <a href="#" onclick="chooseCity();return false" class="popup-region-link link-dashed">Нет, сменить регион</a>
         </div>
     </div>
 </div>
@@ -40,7 +40,6 @@
     <div class="container-fluid"></div>
 </nav>
 <!--/.choose-region-mobile-->
-
 
 
 <!-- fixed navbar -->
@@ -59,7 +58,7 @@
                 <!--/.choose-country-->
 
                 <!--.choose-city-->
-                <div class="navbar-region-item item-city" >
+                <div class="navbar-region-item item-city">
                     <div class="city">
                         <a href="#" class="city-link" onclick="chooseRegion();return false">
                             <span class="city-link-icon icon icon-sm icon-location"></span>
@@ -98,7 +97,6 @@
         <!--</ul>-->
         <!--</div>-->
         <!--&lt;!&ndash;/.basket-mobile&ndash;&gt;-->
-
 
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -145,6 +143,143 @@
         </div>
     </div>
 </nav>
+<section class="main-carusel">
+    <img class="img-responsive" src="../img/slider/main_desktop.jpg" alt="">
+</section>
+
+<section class="info section-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <h1>Diamond Alliance ваш путь к успеху</h1>
+                <p>Международная обучающая система, концентрирующая опыт успешных Независимых предпринимателей Amway
+                    высших
+                    уровней квалификации.Система создана в 2002 году. Знания и пример лидеров Diamond Alliance активно
+                    используются для обучения и совершенствования как новых, так и опытных НПА.</p>
+                <a href="#" class="btn btn-primary btn-outline">Подробнее</a>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <h1>Diamond counter</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video section-list section-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="video-header">
+                <div class="container">
+                    <h2 class="">Свежие и актуальные видеоматериалы</h2>
+                    <a href="#" class="btn btn-primary btn-outline">Все видео</a>
+                    <p>Свежие и актуальные видеоматериалы</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-body">
+
+        </div>
+    </div>
+</section>
+
+<section class="audio section-list">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="audio-header">
+                <div class="container">
+                    <h2 class="">Аудиосеминары</h2>
+                    <a href="#" class="btn btn-primary btn-outline">Все аудио</a>
+                    <p>Аудиозаписи последних семинаров</p>
+                </div>
+            </div>
+        </div>
+        <div class="audio-body">
+            ...
+        </div>
+    </div>
+</section>
+
+<section class="promo section-list">
+    <div class="container">
+        <div class="row">
+            <div class="promo-body">
+                <div class="col-xs-12">Diamond Life – Успех в Amway</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-body">
+
+                <div class="col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="footer-list">
+                                <li>Информация:</li>
+                                <li><a href="#">Контактная информация</a></li>
+                                <li><a href="#">Обучающие материалы</a></li>
+                                <li><a href="#">Авторские права</a></li>
+                                <li><a href="#">Авторские права</a></li>
+                                <li><a href="#">Пользовательское соглашение</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="footer-list">
+                                <li>Информация:</li>
+                                <li><a href="#">Продление подписки</a></li>
+                                <li><a href="#">Использование приложений</a></li>
+                                <li><a href="#">Часто задаваемые вопросы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul class="footer-list">
+                                <li>Следите за нами:</li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="footer-list">
+                                <li>Выбор языка:</li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="footer-list">
+                                <li>Выбор страны:</li>
+                                <li><a href="#">Украина</a></li>
+                                <li><a href="#">Россия</a></li>
+                                <li><a href="#">Казахстан</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom footer-bg">
+        <div class="container">
+            <div class="row">
+                <div class="footer-bottom-item">
+                    <div class="cprt">&copy; 2017 Diamond Alliance. Все права защищены.</div>
+                </div>
+                <div class="footer-bottom-item">
+                    <div class="footer-logo"><img src="../img/navbar-logo-md.png" alt="Yena-Software"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--.choose-country-->
 <div class="modal-choose-country modal-full">
     <a class="close" onclick="chooseRegion();return false">x</a>

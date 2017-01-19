@@ -2,6 +2,9 @@ $navbar-region-font-size: $font-size-base !default;
 $navbar-collapse-max-width: 1100px;
 $navbar-right-padding: 11px;
 
+$navbar-collapse-mobile-width: 300px;
+$navbar-collapse-full-width: 100%;
+
 .navbar {
   //height: $navbar-height;
   margin-bottom: 0;
@@ -156,12 +159,17 @@ $navbar-right-padding: 11px;
   }
 }
 
-$navbar-collapse-mobile-width: 300px;
 
 .navbar-collapse {
-  @media (max-width: $grid-float-breakpoint-max) {
+  z-index: $zindex-dropdown;
+  @media (min-width: $screen-sm-min) and (max-width: $grid-float-breakpoint-max) {
     background: $navbar-inverse-bg;
     width: $navbar-collapse-mobile-width;
+    position: absolute;
+  }
+  @media (max-width: $screen-xs-max){
+    width: $navbar-collapse-full-width;
+    position: absolute;
   }
   @extend .navbar-default;
 }

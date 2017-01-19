@@ -19,6 +19,7 @@
 //@import 'navbar';
 //@import 'dashboard';
 
+
 @import 'checkbox';
 
 //@import 'label';
@@ -31,18 +32,26 @@
 //@import 'tab';
 //@import 'slider';
 //@import 'summary-slider';
-@import 'text';
+//@import 'text';
+
 @import 'dropdown-full-width';
 
-//@import 'buttons-variant';
+@import 'buttons-variant';
 @import 'link';
 
 @import 'header/header';
 @import 'header/navbar';
+
+@import 'audio/audio-card';
+@import 'video/video-card';
+
+@import 'base/section';
 @import 'modal/choose-region';
 //@import 'authorization-steps';
 @import '404';
+@import 'footer/footer';
 
 //@import 'confirm';
 //@import 'statistics';
 //@import 'bootstrap-datetimepicker.scss';
+

@@ -1,0 +1,13 @@
+//base section padding
+$section-base-padding: 45px;
+.section-list{
+  padding: $section-base-padding 0;
+}
+
+//section bg color
+$section-light-bg-color: #dfe8f0;
+
+.section-bg{
+  background: $section-light-bg-color;
+}
+
