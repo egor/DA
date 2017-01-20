@@ -40,6 +40,13 @@ $(document).ready(function () {
         $('#navbar').find('navbar-toggle').removeClass('.collapsed');
     });
 
+    //card hover .card-overlay
+    $(document).on('mouseover', '.card-body', function(e){
+        $(this).find('.card-overlay').addClass('is-active');
+    }).on('mouseout', '.card-body', function(e){
+        $(this).find('.card-overlay').removeClass('is-active');
+    });
+
 
     // run test on initial page load
     checkSize();
