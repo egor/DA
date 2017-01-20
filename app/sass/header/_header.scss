@@ -1,0 +1,69 @@
+$header-bg-color: #293744;
+$header-font-color: $navbar-default-color !default;
+$header-height: 90px;
+
+$popup-region-bg-color: #78899a;
+$popup-region-padding: 15px;
+$popup-region-border-radius: 6px;
+$popup-region-link-magrin: 10px;
+
+.region-header {
+  background-color: $header-bg-color;
+  @media (max-width: $screen-xs-max) {
+    background-color: $navbar-default-bg;
+  }
+  // height: $header-height;
+}
+
+.popup-box {
+  display: table;
+  height: 100%;
+  padding: $popup-region-padding;
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.popup-region {
+  color: $header-font-color;
+  background-color: $popup-region-bg-color;
+  padding: $popup-region-padding * 1.5;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  border-radius: $popup-region-border-radius;
+  @media (max-width: $screen-xs-max) {
+    background-color: $navbar-default-bg;
+  }
+  &-text {
+    padding-right: $popup-region-link-magrin * 2;
+    display: inline-block;
+  }
+  &-link {
+    @include links($header-font-color, $header-font-color, darken($header-font-color, 15%), darken($header-font-color, 15%), none);
+    position: relative;
+    margin-left: $popup-region-link-magrin;
+    &:before {
+      content: '-';
+      position: absolute;
+      left: -$popup-region-link-magrin;
+    }
+  }
+  &:after {
+    content: " ";
+    border-color: $popup-region-bg-color transparent;
+    border-style: solid solid none;
+    border-width: 10px;
+    bottom: -10px;
+    left: 60px;
+    position: absolute;
+    z-index: 2;
+    @media (max-width: $screen-xs-max) {
+      left: auto;
+      right: 40px;
+      border-color: $navbar-default-bg transparent;
+    }
+  }
+}
+

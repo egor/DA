@@ -1,0 +1,39 @@
+$content-columns: ($grid-columns/5); // 12/5
+$content-gutter: $grid-gutter-width; // отступ между колонками по умолчанию 30px, но можно обнулить
+
+// Боллее красивый вариант
+.content-row {
+ // $content-columns: ($grid-columns/5); // 12/5
+  //$content-gutter: $grid-gutter-width; // отступ между колонками по умолчанию 30px, но можно обнулить
+  @include make-row($content-gutter); // используем мощь grid-framework.less
+  > .col-content {
+    @include make-lg-column($content-columns, $content-gutter); // для lg-устройств
+    @include make-md-column($content-columns, $content-gutter); // для md-устройств
+    @include make-sm-column($content-columns, $content-gutter); // для sm-устройств
+    @include make-xs-column($content-columns, $content-gutter); // для xs-устройств
+  }
+}
+
+
+
+.footer{
+  //@include make-row();
+  &-list{
+    //@include make-md-column($content-columns);
+    //@media (max-width: $screen-sm-max) {
+    //  @include make-sm-column(4);
+    @include make-lg-column($content-columns, $content-gutter); // для lg-устройств
+    @include make-md-column($grid-columns / 5, $content-gutter); // для md-устройств
+    @include make-sm-column($grid-columns / 3, $content-gutter); // для sm-устройств
+    @include make-xs-column($grid-columns, $content-gutter); // для xs-устройств*/
+    //@include clearfix();
+    /*@include make-lg-column($content-columns, $content-gutter); // для lg-устройств
+    @include make-md-column($content-columns, $content-gutter); // для md-устройств
+    @include make-sm-column($content-columns, $content-gutter); // для sm-устройств
+    @include make-xs-column($content-columns, $content-gutter); // для xs-устройств*/
+    //@extend .col-content;
+    //@include make-lg-column($content-columns, $content-gutter);
+    //@include make-lg-column(5, $grid-gutter-width );
+    //@include make-lg-column-offset(1);
+  }
+}

@@ -1,0 +1,18 @@
+//Links Mixin
+@mixin links ($link, $visited, $hover, $active, $bordered) {
+  & {
+    color: $link;
+    //@include transition(all ease .3s);
+    &:visited {
+      color: $visited;
+    }
+    &:hover {
+      color: $hover;
+      text-decoration: $bordered;
+    }
+    &:active, &:focus {
+      color: $active;
+      text-decoration: $bordered;
+    }
+  }
+}

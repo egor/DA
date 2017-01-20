@@ -1,0 +1,221 @@
+$navbar-region-font-size: $font-size-base !default;
+$navbar-collapse-max-width: 1100px;
+$navbar-right-padding: 11px;
+
+$navbar-collapse-mobile-width: 300px;
+$navbar-collapse-full-width: 100%;
+
+.navbar {
+  //height: $navbar-height;
+  margin-bottom: 0;
+  &-nav {
+    &.navbar-right {
+      @media (max-width: $grid-float-breakpoint-max) {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .nav {
+    &.navbar-right > li > a {
+      @media (min-width: $grid-float-breakpoint) {
+        padding: 11px 15px;
+        > .icon {
+          line-height: $line-height-base;
+        }
+      }
+    }
+  }
+}
+
+.navbar-header {
+  float: left;
+}
+
+.navbar-basket {
+  float: right;
+}
+
+.navbar-default {
+  color: $navbar-default-color;
+  border: none;
+  font-size: $navbar-default-font-size;
+}
+
+.region-box {
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
+    top: - $navbar-height;
+    left: 0;
+    padding: 0 $navbar-padding-horizontal;
+  }
+}
+
+.navbar-region {
+  display: table;
+  width: 300px;
+  float: left;
+  height: $navbar-height;
+  font-size: $navbar-region-font-size;
+  //padding: $navbar-padding-vertical;
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    table-layout: fixed;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $grid-float-breakpoint-max) {
+    position: absolute;
+    left: 75px;
+    width: auto;
+  }
+  @media (min-width: $screen-xs-max) and (max-width: $grid-float-breakpoint-max + 100) {
+    width: auto;
+  }
+  //@include navbar-vertical-align($navbar-height);
+  &-item {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.navbar-user {
+  &-name, &-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//.region-box{
+//  display: table;
+//}
+.country {
+  &-list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-name {
+    line-height: 1;
+  }
+}
+
+.city {
+  @media (max-width: $screen-xs-max) {
+    float: right;
+  }
+  &-link {
+    display: table;
+    @include links($header-font-color, darken($header-font-color, 2%), darken($header-font-color, 15%), darken($header-font-color, 15%), none);
+    &-icon, &-name {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &-name {
+      @include text-overflow();
+      max-width: 150px;
+      display: block;
+      margin-left: 5px;
+    }
+  }
+}
+
+.item-city {
+  padding-left: 15px;
+}
+
+// Brand/project name
+.navbar-brand {
+  @media (max-width: $grid-float-breakpoint-max) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    width: 65px;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: 0;
+    }
+  }
+}
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+.navbar-toggle {
+  float: left;
+  margin-left: $navbar-padding-horizontal;
+  //@include navbar-vertical-align(34px);
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+}
+
+.navbar-default {
+  @media (max-width: $grid-float-breakpoint-max) {
+    .navbar-collapse {
+      clear: both;
+    }
+  }
+}
+
+
+.navbar-collapse {
+  z-index: $zindex-dropdown;
+  @media (min-width: $screen-sm-min) and (max-width: $grid-float-breakpoint-max) {
+    background: $navbar-inverse-bg;
+    width: $navbar-collapse-mobile-width;
+    position: absolute;
+  }
+  @media (max-width: $screen-xs-max){
+    width: $navbar-collapse-full-width;
+    position: absolute;
+  }
+  @extend .navbar-default;
+}
+
+.navbar-nav {
+  .search-desktop, .feedback-desktop {
+    @media (max-width: $grid-float-breakpoint-max) {
+      display: none;
+    }
+  }
+}
+
+//navbar basket
+//.navbar-basket{
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  margin: 0;
+//}
+.dropdown-basket {
+  &.basket {
+    &-desktop {
+      @media (max-width: $grid-float-breakpoint) {
+        display: none;
+      }
+    }
+    &-mobile {
+      display: none;
+      @media (max-width: $grid-float-breakpoint-max) {
+        display: block;
+      }
+      &.open {
+        .basket-list {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+//.basket-mobile{
+//  position: absolute;
+//  right: 0;
+//  top: 0;
+//}
+
+//.basket-list{
+//  display: none;
+//}
