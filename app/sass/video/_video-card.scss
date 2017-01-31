@@ -7,13 +7,14 @@ $card-border: 1px solid #babebf;
 $card-info-color: #fff;
 $card-info-bg-color: rgba(0, 0, 0, 0.6);
 $card-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.2);
+$card-shadow-hover: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
+$card-transition: all ease .4s;
 
 $card-border-radius: $border-radius-base;
 
 $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
 
 //default card
-
 .card {
   position: relative;
   @include size($card-width, $card-height);
@@ -22,11 +23,23 @@ $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
   border: $card-border;
   border-radius: $card-border-radius;
   @include box-shadow($card-shadow);
+  @include transition($card-transition);
+  &:hover{
+    @include box-shadow($card-shadow-hover);
+    @include transition($card-transition);
+    img{
+        @include scale(1.2);
+        @include transition(all ease .5s);
+    }
+  }
   &-body {
     position: relative;
     overflow: hidden;
     &-img {
       display: block;
+      > img{
+        @include transition(all ease .5s);
+      }
     }
   }
   &-info {
@@ -38,10 +51,13 @@ $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
     width: 100%;
     &-title{
       @include text-overflow();
+      font-size: $card-video-font-size;
+      margin-bottom: $card-padding-base / 3;
     }
   }
   &-overlay {
     //display: none;
+    font-size: $card-video-font-size;
     position: absolute;
     top: 0;
     padding: $card-padding-base;
@@ -50,12 +66,12 @@ $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
     background: $card-info-bg-color;
     @include border-top-radius($card-border-radius);
     @include opacity(0);
-    @include transition(all ease .3s);
+    @include transition($card-transition);
     @include translate(0, 50%);
     &.is-active {
       //display: block;
       @include opacity(1);
-      @include transition(all ease .3s);
+      @include transition($card-transition);
       @include translate(0, 0);
     }
   }
