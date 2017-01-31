@@ -9,10 +9,12 @@ $card-info-bg-color: rgba(0, 0, 0, 0.6);
 $card-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.2);
 $card-shadow-hover: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
 $card-transition: all ease .4s;
+$card-border-new-video: 1px solid #f05242;
 
-$card-border-radius: $border-radius-base;
+$card-border-radius: $border-radius-large;
 
 $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
+
 
 //default card
 .card {
@@ -39,6 +41,7 @@ $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
       display: block;
       > img{
         @include transition(all ease .5s);
+        border-radius: $card-border-radius;
       }
     }
   }
@@ -77,6 +80,34 @@ $card-video-font-size: ceil(($font-size-base * 1.1)) !default; // ~18px
   }
   &-footer {
     padding: ($card-padding-base * 1.2) $card-padding-base;
+  }
+  &-new{
+    border: $card-border-new-video;
+  }
+  &-author{
+    @include box-shadow(none);
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      //z-index: -1;
+      width: 100%;
+      height: 2px;
+      background: $card-bg-color;
+      border: $card-border;
+      border-top: none;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      @include border-bottom-radius($card-border-radius);
+    }
+    &:before{
+      bottom: -5px;
+      width: 94%;
+    }
+    &:after{
+      bottom: -3px;
+      width: 97%;
+    }
   }
 }
 
