@@ -109,19 +109,18 @@
                 <li><a href="#video">Курсы</a></li>
             </ul>
 
-            <!--.not-registered-user-->
             <hr class="navbar-hr">
-            <ul class="nav navbar-nav nav-registration">
+
+            <!--.not-registered-user-->
+            <ul class="nav navbar-nav nav-registration hide">
                 <li><a class="navbar-user" href="#"><span class="navbar-user-icon icon icon-lg icon-user2" aria-hidden="true"></span><span
                         class="navbar-user-name">Регистрация</span></a></li>
                 <li><button href="#" class="btn btn-default btn-outline navbar-btn">Войти</button></li>
             </ul>
-            <hr class="navbar-hr">
             <!--/.not-registered-user-->
 
-
             <!--.registered-user-->
-            <ul class="nav navbar-nav navbar-right hide">
+            <ul class="nav navbar-nav navbar-right nav-user">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle navbar-user" data-toggle="dropdown" role="button"
                        aria-haspopup="true"
@@ -133,16 +132,22 @@
                         <li><a href="#">Мои мероприятия</a></li>
                         <li><a href="#">Мои партнеры</a></li>
                         <li><a href="#">Мои видео</a></li>
-                        <li><a href="#">Выйти</a></li>
+                        <li><a href="#"><span class="text-danger">Выйти</span></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><span class="subscription">Осталось дней подписки<span class="">2 475</span></span></li>
-                        <li>
+                        <li class="user-subscription">
+                            <span class="subscription">Осталось дней подписки<span class="">2 475</span></span>
                             <button href="#" class="btn btn-block btn-success">Продлить подписку</button>
                         </li>
                     </ul>
                 </li>
             </ul>
             <!--/.registered-user-->
+
+            <hr class="navbar-hr">
+
+
+
+            <!--.navbar-settings-->
             <ul class="nav navbar-nav navbar-right navbar-settings">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle navbar-user" data-toggle="dropdown" role="button"
@@ -156,6 +161,9 @@
                     </ul>
                 </li>
             </ul>
+            <!--/.navbar-settings-->
+
+            <!--.navbar-basket-->
             <ul class="nav navbar-nav navbar-right navbar-basket">
                 <li class="navbar-search search-desktop"><a href="#"><span class="icon icon-lg icon-search"></span></a>
                 </li>
@@ -169,6 +177,8 @@
                     </div>
                 </li>
             </ul>
+            <!--/.navbar-basket-->
+
         </div>
     </div>
 </nav>
