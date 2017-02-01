@@ -102,13 +102,26 @@
 
 
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav nav-partition">
                 <li class="active"><a href="#events">Мероприятия</a></li>
                 <li><a href="#shop">Магазин</a></li>
                 <li><a href="#video">Медиа <span class="badge">1</span></a></li>
                 <li><a href="#video">Курсы</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+
+            <!--.not-registered-user-->
+            <hr class="navbar-hr">
+            <ul class="nav navbar-nav nav-registration">
+                <li><a class="navbar-user" href="#"><span class="navbar-user-icon icon icon-lg icon-user2" aria-hidden="true"></span><span
+                        class="navbar-user-name">Регистрация</span></a></li>
+                <li><button href="#" class="btn btn-default btn-outline navbar-btn">Войти</button></li>
+            </ul>
+            <hr class="navbar-hr">
+            <!--/.not-registered-user-->
+
+
+            <!--.registered-user-->
+            <ul class="nav navbar-nav navbar-right hide">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle navbar-user" data-toggle="dropdown" role="button"
                        aria-haspopup="true"
@@ -126,6 +139,20 @@
                         <li>
                             <button href="#" class="btn btn-block btn-success">Продлить подписку</button>
                         </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--/.registered-user-->
+            <ul class="nav navbar-nav navbar-right navbar-settings">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle navbar-user" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false"> <span class="navbar-user-icon icon icon-lg icon-user2"></span><span
+                            class="navbar-user-name">Настройки</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header"><spam>Выбор языка</spam></li>
+                        <li><a href="#"><span class="lang-abbr">RU</span><span class="lang-full dropdown-txt-color">Русский</span></a></li>
+                        <li><a href="#"><span class="lang-abbr">EN</span><span class="lang-full dropdown-txt-color">English</span></a></li>
                     </ul>
                 </li>
             </ul>
