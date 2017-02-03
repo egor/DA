@@ -57,7 +57,7 @@ $(document).ready(function () {
 
 //Function mobile basket position
 function checkSize(){
-    var basket_breakpoint = 1100;
+    var basket_breakpoint = 1200;
     if ($(window).width() <= basket_breakpoint){
         $('#navbar').insertAfter($('.navbar-default'));
         $('.navbar-basket').insertAfter($('.navbar-header'));

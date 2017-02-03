@@ -5,6 +5,7 @@
 //mixin
 @import 'mixin/links';
 @import 'mixin/buttons';
+@import 'mixin/badges';
 
 //@import 'nav';
 //@import 'responsive-table';
@@ -33,7 +34,8 @@
 //@import 'summary-slider';
 //@import 'text';
 
-@import 'dropdown-full-width';
+@import 'dropdown/_dropdown-full-width';
+@import 'dropdown/dropdown';
 
 @import 'buttons-variant';
 @import 'link';

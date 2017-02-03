@@ -1,20 +1,28 @@
 $small-font-size: 0.75em;
+$badge-custom-font-weight: 400 !default;
+$badge-custom-margin: 5px;
+
 $badges: (
-        "alert": #fff6bf,
+        "primary": $brand-primary,
         "default": #999,
-        "error": #fbe3e4,
-        "notice": #e5edf8,
-        "success": #e6efc2,
+        "warning": $brand-warning,
+        "danger": $brand-danger,
+        "info": $brand-info,
+        "success": $brand-success,
 ) !default;
 
 @each $badge-type, $color in $badges {
-  .badge-#{$badge-type} {
+  .badge.badge-#{$badge-type} {
     background-color: $color;
-    border-radius: $small-font-size * 5;
+    margin-left: $badge-custom-margin;
+    border-radius: $border-radius-base;
     color: darken($color, 60%);
     display: inline-block;
     font-size: $small-font-size;
+    font-weight: $badge-custom-font-weight;
     line-height: 1;
-    padding: 0.4em 1.2em;
+
+    //padding: 0.4em 1.2em;
   }
 }
+

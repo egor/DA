@@ -50,11 +50,27 @@
 
         <div class="region-box">
             <div class="navbar-region">
+
                 <!--.choose-country-->
                 <div class="navbar-region-item item-country">
                     <div class="country">
-                        <span class="country-list country-flag flag-sm flag-sm-UA"></span>
-                        <span role="button" class="country-list country-name" onclick="chooseCity()">UA</span>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown dropdown-city"><a href="#" data-toggle="dropdown" id="dropdown-city" aria-haspopup="true" aria-expanded="true"><span class="country-list country-flag flag-sm flag-sm-UA"></span><span class="country-list country-name">UA</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-darken full-content" aria-labelledby="dropdown-city">
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-UA"></span><span class="country-list country-name">UA</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-RU"></span><span class="country-list country-name">RU</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-DE"></span><span class="country-list country-name">DE</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-KZ"></span><span class="country-list country-name">KZ</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-AT"></span><span class="country-list country-name">AT</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-CA"></span><span class="country-list country-name">CA</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-US"></span><span class="country-list country-name">US</span></a></li>
+                                    <li><a href="#"><span class="country-list country-flag flag-sm flag-sm-OM"></span><span class="country-list country-name">Other</span></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!--<span class="country-list country-flag flag-sm flag-sm-UA"></span>-->
+                        <!--<span role="button" class="country-list country-name" onclick="chooseCity()">UA</span>-->
                     </div>
                 </div>
                 <!--/.choose-country-->
@@ -103,10 +119,10 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav nav-partition">
-                <li class="active"><a href="#events">Мероприятия</a></li>
-                <li><a href="#shop">Магазин</a></li>
-                <li><a href="#video">Медиа <span class="badge">1</span></a></li>
-                <li><a href="#video">Курсы</a></li>
+                <li class="active"><a href="#events">Мероприятия<span class="badge badge-danger">1</span></a></li>
+                <li><a href="#shop">Магазин<span class="badge badge-danger">10</span></a></li>
+                <li><a href="#video">Медиа<span class="badge badge-danger">5</span></a></li>
+                <li><a href="#video">Курсы<span class="badge badge-danger">3</span></a></li>
             </ul>
 
             <hr class="navbar-hr">
@@ -135,7 +151,7 @@
                         <li><a href="#"><span class="text-danger">Выйти</span></a></li>
                         <li role="separator" class="divider"></li>
                         <li class="user-subscription">
-                            <span class="subscription">Осталось дней подписки<span class="">2 475</span></span>
+                            <span class="subscription">Дней подписки: <span class="">2 475</span></span>
                             <button href="#" class="btn btn-block btn-success">Продлить подписку</button>
                         </li>
                     </ul>
@@ -165,9 +181,10 @@
 
             <!--.navbar-basket-->
             <ul class="nav navbar-nav navbar-right navbar-basket">
-                <li class="navbar-search search-desktop"><a href="#"><span class="icon icon-lg icon-search"></span></a>
+                <li class="navbar-search search-desktop"><a href="#" onclick="chooseRegion();return false"><span class="icon icon-lg icon-search"></span></a>
+                    <!--<input class="form-control search" type="search" id="navbar-search-input" placeholder="Enter search request">-->
                 </li>
-                <li class="navbar-feedback feedback-desktop"><a href="#"><span
+                <li class="navbar-feedback feedback-desktop hidden-xs"><a href="#"><span
                         class="icon icon-lg icon-messages"></span></a></li>
                 <li class="dropdown dropdown-basket full-width">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
